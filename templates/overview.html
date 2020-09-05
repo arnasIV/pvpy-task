@@ -1,0 +1,36 @@
+<doctype html="">
+    <title>Power Calculation Overview</title>
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+    </style>
+    <h2>Power Calculation Overview</h2>
+    <table>
+    <tr>
+        <th>Name</a></td>
+        <th>Total Power</td>
+        <th>Calculation Time, s</td>
+    </tr>
+
+    {% for row in rows %}
+    <tr>
+        <td>{{ row.name }}</a></td>
+        <td>{{ row.power}}</td>
+        <td>{{ row.duration }}</td>
+    </tr>
+    {% endfor %}
+    </doctype>
+</table>

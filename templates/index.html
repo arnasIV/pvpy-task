@@ -1,0 +1,20 @@
+<doctype html="">
+    <title>Power Calculation</title>
+    <h2>Power Calculation Form</h2>
+    {% from "_formhelpers.html" import render_field %}
+    <form method="post">
+        <dl> {{ render_field(form.name) }}</dl>
+        
+        <dl> {{ render_field(form.binary) }} </dl>
+
+        <dl> {{ render_field(form.power) }} </dl>
+
+        <dl> {{ render_field(form.grid_input) }} </dl>
+
+        <input type="submit" value="Submit">
+
+        {% if message %}
+            <p>{{ message }}</p>
+        {% endif %}
+    </form>
+</doctype>
