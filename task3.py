@@ -16,7 +16,7 @@ q = Queue(connection=r)
 def index():
     form = CalculateEnergyForm(request.form)
     if request.method == 'POST' and form.validate():
-        log("Adding task to the queue: {}, {}, {}, {}".format(form.name.data, form.binary.data, form.power.data, form.grid_input.data) )
+        log("Adding task to the queue: {}, {}, {}, {}".format(form.name.data, form.binary.data, form.power.data, form.grid_input.data))
         job = q.enqueue(calculate_power_task, form.name.data, form.binary.data, form.power.data, form.grid_input.data)
         session['message'] = "Request submitted"
         return redirect(url_for("index"))
